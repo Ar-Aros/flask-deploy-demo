@@ -24,7 +24,7 @@ jobs:
             # Remove old version
             rm -rf flask-deploy-demo
             # Clone fresh code
-            git clone https://github.com/<your-username>/<your-repo>.git flask-deploy-demo
+            git clone https://github.com/Ar-Aros/flask-deploy-demo
             cd flask-deploy-demo
             # Stop old container if running
             sudo docker stop flask-deploy-demo || true
