@@ -2,9 +2,9 @@ from flask import Flask
 
 app = Flask(__name__)
 
-@app.route("/test")
-def test():
-    return "Workflow is working! ✅"
+@app.route('/')
+def home():
+    return "Hello, World! 🚀 Deployed with Docker + GitHub Actions + AWS EC2"
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
