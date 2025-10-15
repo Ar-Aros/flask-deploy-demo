@@ -13,7 +13,12 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        git branch: 'main', url: env.REPO
+        checkout([$class: 'GitSCM',
+    branches: [[name: '*/main']],
+    userRemoteConfigs: [[url: env.REPO]],
+    extensions: [[$class: 'WipeWorkspace']]
+])
+
       }
     }
 
